@@ -11,40 +11,40 @@ public class Main {
         //todo put whole code in loop
         //todo use d.r.y programming fool
         //todo  h=(q+⌊(m+1)2610⌋+K+⌊K4⌋+5−J)mod
+ do {
+     System.out.println("There is a poem that goes like this");
+     System.out.println("Monday's child is fair of face,");
+     System.out.println("Tuesday's child is full of grace,");
+     System.out.println("Wednesday's child is full of woe,");
+     System.out.println("Thursday's child has far to go.");
+     System.out.println("Friday's child is loving and giving,");
+     System.out.println("Saturday's child works hard for a living,");
+     System.out.println("But the child born on the Sabbath Day,");
+     System.out.println("Is fair and wise and good in every way.");
+     System.out.println("Let's see what line of the poem you are!");
 
-        System.out.println("There is a poem that goes like this");
-        System.out.println("Monday's child is fair of face,");
-        System.out.println("Tuesday's child is full of grace,");
-        System.out.println("Wednesday's child is full of woe,");
-        System.out.println("Thursday's child has far to go.");
-        System.out.println("Friday's child is loving and giving,");
-        System.out.println("Saturday's child works hard for a living,");
-        System.out.println("But the child born on the Sabbath Day,");
-        System.out.println("Is fair and wise and good in every way.");
-        System.out.println("Let's see what line of the poem you are!");
+     Scanner keyboard;
+     keyboard = new Scanner(System.in);
 
-        Scanner keyboard;
-        keyboard = new Scanner(System.in);
+     int q;
+     int m;
+     int year;
 
-        int q;
-        int m;
-        int year;
+     System.out.println("What month were you born?(numerical value)");
+     m = keyboard.nextInt();
+     System.out.println("What day were you born?");
+     q = keyboard.nextInt();
+     System.out.println("What year were you born?");
+     year = keyboard.nextInt();
 
-        System.out.println("What month were you born?(numerical value)");
-        m = keyboard.nextInt();
-        System.out.println("What day were you born?");
-        q = keyboard.nextInt();
-        System.out.println("What year were you born?");
-        year = keyboard.nextInt();
-
-        int k = year % 100;
-        int j = year / 100;
-        int h;
-        h = (q + (13 * (m + 1)) / 5 + k + (k / 4) + (j / 4) + 5 * j) % 7;
-        dayOfTheWeek(h);
-        daysOfMonth(m, year);
-        poemLine(h);
-
+     int k = year % 100;
+     int j = year / 100;
+     int h;
+     h = (q + (13 * (m + 1)) / 5 + k + (k / 4) + (j / 4) + 5 * j) % 7;
+     dayOfTheWeek(h);
+     daysOfMonth(m, year);
+     poemLine(h);
+ }while(true);
 
     }
 
@@ -156,5 +156,6 @@ public class Main {
 
 
     }
+
 }
 
