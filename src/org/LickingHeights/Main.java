@@ -11,13 +11,24 @@ public class Main {
         //todo put whole code in loop
         //todo use d.r.y programming fool
         //todo  h=(q+⌊(m+1)2610⌋+K+⌊K4⌋+5−J)mod
+
+        System.out.println("There is a poem that goes like this");
+        System.out.println("Monday's child is fair of face,");
+        System.out.println("Tuesday's child is full of grace,");
+        System.out.println("Wednesday's child is full of woe,");
+        System.out.println("Thursday's child has far to go.");
+        System.out.println("Friday's child is loving and giving,");
+        System.out.println("Saturday's child works hard for a living,");
+        System.out.println("But the child born on the Sabbath Day,");
+        System.out.println("Is fair and wise and good in every way.");
+        System.out.println("Let's see what line of the poem you are!");
+
         Scanner keyboard;
         keyboard = new Scanner(System.in);
 
         int q;
         int m;
         int year;
-
 
         System.out.println("What month were you born?(numerical value)");
         m = keyboard.nextInt();
@@ -32,17 +43,10 @@ public class Main {
         h = (q + (13 * (m + 1)) / 5 + k + (k / 4) + (j / 4) + 5 * j) % 7;
         dayOfTheWeek(h);
         daysOfMonth(m, year);
-        System.out.println("There is a poem that goes like this");
-        System.out.println("Monday's child is fair of face,");
-        System.out.println("Tuesday's child is full of grace,");
-        System.out.println("Wednesday's child is full of woe,");
-        System.out.println("Thursday's child has far to go.");
-        System.out.println("Friday's child is loving and giving,");
-        System.out.println("Saturday's child works hard for a living,");
-        System.out.println("But the child born on the Sabbath Day,");
-        System.out.println("Is fair and wise and good in every way.");
-    }
+        poemLine(h);
 
+
+    }
 
 
     public static String dayOfTheWeek(int h) {
@@ -122,6 +126,35 @@ public class Main {
                 }
         }
         return "month";
+    }
+
+    public static String poemLine(int h) {
+        switch (h) {
+            case 1:
+                System.out.println("But the child born on the Sabbath Day,is fair and wise and good in every way.");
+                break;
+            case 2:
+                System.out.println("Monday's child is fair of face");
+                break;
+            case 3:
+                System.out.println("Tuesday's child is full of grace");
+                break;
+            case 4:
+                System.out.println("Wednesday's child is full of woe");
+                break;
+            case 5:
+                System.out.println("Thursday's child has far to go");
+                break;
+            case 6:
+                System.out.println("Friday's child is loving and giving");
+                break;
+            case 7:
+                System.out.println("Saturday's child works hard for a living");
+
+        }
+        return "h";
+
+
     }
 }
 
